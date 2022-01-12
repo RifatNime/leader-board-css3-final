@@ -58,8 +58,10 @@ header .container{
     width: 45px;
 }
 .header-logo:hover{
+
     transform: scale(1.1); /*skew(30deg)rotate(60deg); */
     transition: transform 2s ease-in-out;
+    
 }
 .header-h1{
     color: #FFFFFF;
@@ -77,6 +79,8 @@ header .container{
 .navigation-items{
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 .navigation-items li{
     padding: 0 20px;
@@ -101,6 +105,27 @@ header .container{
     transform: scale(1.1); /*skew(30deg)rotate(60deg); */
     transition: transform 2s ease-in-out;
     border: 4px solid #FF4A60;
+}
+/**/
+.border{
+    /*photo image or border er vhitore a niye jabo*/
+    background-color: #fff;
+    position: absolute;
+    transition: 0.7s ease-in-out;
+}
+.border.bottom{
+    height: 4px;
+    width: 30px;
+    bottom: 5px;
+    right: 100%;
+    border-radius: 5px;
+}
+.menu-item{
+    position: relative;
+    overflow: hidden;
+}
+.navigation-items:hover .border.bottom{
+    right: 5px;
 }
 /*Top banner Player Section */
 #top-section .container{
@@ -257,6 +282,10 @@ i.fa-clock {
 }
 .footer-section .logo img{
     width: 30px;
+}
+.footer-logo:hover{
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 2s ease-in-out;
 }
 .social-icons{
     display: flex;
