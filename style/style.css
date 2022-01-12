@@ -269,3 +269,24 @@ i.fa-clock {
 .social-icons i:hover{
     color:#FF4A60;
 }
+/* Media Queries small device*/
+@media (max-width:688px){
+    .navigation-items li{
+    padding:0 10px;
+}
+    #top_section .container{
+        padding: 20px;
+    }
+    .player-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .blog-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #latest_course .container{
+        padding:20px;
+    }
+}
