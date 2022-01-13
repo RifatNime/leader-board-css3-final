@@ -163,6 +163,10 @@ header .container{
     box-shadow: 0px 5.34229px 13.3557px rgb(0 0 0 / 13%);
     cursor:pointer;
 }
+.player-name{
+    font-size: 18px;
+    padding-left:15px;
+}
 .player-image{
     margin-right:10px;
     display:flex;
@@ -205,6 +209,10 @@ hr{
     padding-left:15px;
 }
 .blog-author{
+    color: #AEAEAE;
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 400;
     margin-top:5px;
 }
 .blog-author span{
@@ -241,7 +249,7 @@ hr{
 }
 
 .course-bottom{
-    margin-top:25px;
+    margin-top: 8px;
     display: flex;
     justify-content: space-between;
 } 
