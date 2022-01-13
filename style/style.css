@@ -215,7 +215,7 @@ hr{
     background-color: #fff;
     margin: 20px auto;
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
     animation: fadeSlide 2s ease 0s 1;
 }
 .courses{
