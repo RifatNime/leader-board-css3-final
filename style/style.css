@@ -37,13 +37,17 @@ section{
 /* Header Styles  css here*/
 header{
     background: #562EFF;
+    height: 100px;
     padding:10px 0;
     border: 2px solid #ffffff;
     animation: slideDown 1s ease .0s 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 header .container{
     display: flex;
-    padding: 10px 10px;
+    padding: 10px 0px;
     justify-content: space-between;
     align-items: center;
     border: 4px solid #fff;
@@ -58,8 +62,9 @@ header .container{
     width: 45px;
 }
 .header-logo:hover{
-
-    transform: scale(1.1); /*skew(30deg)rotate(60deg); */
+    /* transform: scale(1.1); skew(30deg)rotate(60deg);
+    transition: transform 2s ease-in-out; */
+    transform: scale(1.1) rotate(360deg);
     transition: transform 2s ease-in-out;
     
 }
@@ -75,20 +80,25 @@ header .container{
 
 .navigation{
     display: flex;
-}
-.navigation-items{
-    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    position: relative;
-    overflow: hidden;
 }
-.navigation-items li{
-    padding: 0 20px;
+.navigation-items ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation-items ul li{
     list-style: none;
+    margin-right: 36px;
+    overflow: hidden;
+    position: relative;
+    
 }
 .navigation-items li a{
     color:#ffffff;
     text-decoration: none;
+    display: block;
 
 }
 .navigation-items li a:hover{
@@ -106,26 +116,23 @@ header .container{
     transition: transform 2s ease-in-out;
     border: 4px solid #FF4A60;
 }
-/**/
-.border{
-    /*photo image or border er vhitore a niye jabo*/
-    background-color: #fff;
-    position: absolute;
-    transition: 0.7s ease-in-out;
+/*--------------------------------------------*/
+.border-bottom{
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+    border-radius: 25px;
+    transform: translateX(-66px) translateY(0px);
+    transition: 0.2s linear;
 }
-.border.bottom{
-    height: 4px;
-    width: 30px;
-    bottom: 5px;
-    right: 100%;
-    border-radius: 5px;
+
+.navigation-items ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.menu-item{
-    position: relative;
-    overflow: hidden;
-}
-.navigation-items:hover .border.bottom{
-    right: 5px;
+.navigation-items ul li:hover .border-bottom{
+    transform: translateX(0px);
+
 }
 /*Top banner Player Section */
 #top-section .container{
@@ -237,17 +244,27 @@ hr{
     margin-top:25px;
     display: flex;
     justify-content: space-between;
-}
+} 
 .fa-star.filled{
     color: #FFC014;
     margin:-2px;
+}
+.fa-star-half-alt{
+    color: #FFC014;
+    margin-left: -3px;
 }
 .fa-star.empty{
     color: #AEAEAE;
     margin:-2px;
 }
-.course-rating span{
+.course-rating {
     margin-left:5px;
+}
+.course-rating span{
+    color: #AEAEAE;
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 400;
 }
 .course-duration{
     background-color: #FFE4E8;
@@ -265,7 +282,6 @@ i.fa-clock {
     font-size:13px;
     color:#FF4A60;
 }
-
 /* footer section start */
 .container{
     width: 870px;
@@ -299,23 +315,84 @@ i.fa-clock {
     color:#FF4A60;
 }
 /* Media Queries small device*/
-@media (max-width:688px){
+@media only screen and (max-width:688px){
+    header{
+        width: 100%;
+        justify-content: space-between;
+    } 
+    .border-bottom{
+
+        transform: translateX(-50px) translateY(0px);
+    }
+   .container{
+    margin-left: 15px;
+    }
+    .navigation{
+        margin-right: 15px;
+        margin-left: 45px;
+    }
+    
     .navigation-items li{
     padding:0 10px;
-}
-    #top_section .container{
+    }
+    .navigation-items ul li{
+        margin-right:7px;
+    }
+    
+    .profile{
+        margin-left: 10px;
+    }
+    section{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-title{
+        text-align: center;
+    }
+    
+    /* #top_section .container{
         padding: 20px;
+    } */
+    .latest-course{
+        height: 100%;
+        margin-bottom: 30px;
     }
+    
     .player-content{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    } 
+
+    .single-player{
+        flex-direction: column;
     }
+    .top-blog{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: auto;
+    }
+    .single-blog{
+
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        justify-items: left;
+    }
+    
+    .blog-text{
+        margin-left: 0;
+        padding-right: 10px;
+    }
+    .blog-text .blog-title{
+        width: 100%;
+    }
+
     .blog-content{
         grid-template-columns: repeat(1,1fr);
     }
     .courses{
-        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 30px;
     }
     #latest_course .container{
-        padding:20px;
+        grid-template-columns: repeat(1,1fr);
     }
 }
